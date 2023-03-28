@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatgpt Save</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/turndown.js"></script>
+
+    <style>
+        html, body {
+            height: 460px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+       
+    <!-- bootstrap 5 select -->
+    <div class="container mt-2  ">
+        <div class="row">
+            <h1 class="text-center">Chatgpt Save</h1>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <label for="select-export" class="form-label">Convert to</label>
+                <select id="select-export" class="form-select" aria-label="Default select example">
+                    <option value="md">Markdown</option>
+                    <option value="html">Html</option>
+                    <option value="json">Json</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 d-flex justify-content-between">
+                <button type="button" id="convert-btn" class="btn btn-primary btn-sm">Convert</button>
+                <div>
+                    <button type="button" id="download-btn" class="btn btn-secondary btn-sm"><i class="bi bi-download"></i></button>
+                    <button type="button" id="copy-btn" class="btn btn-success btn-sm"><i class="bi bi-clipboard"></i></button>
+                </div>
+            </div>
+            <p class="d-none text-danger" id="error">No chats found!</p>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <textarea class="form-control" id="textarea-export" rows="9"></textarea>
+            </div>
+        </div>
+        <div class="row mt-2 ">
+            <div class="col-12 d-flex gap-1 justify-content-end">
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script type="module" src="popup.js"></script>
+</html>

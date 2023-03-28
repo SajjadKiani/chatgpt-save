@@ -1,0 +1,21 @@
+{
+	"name": "Chatgpt save",
+	"version": "0.1.0",
+	"description": "Saving chats in chatgpt",
+	"permissions": ["storage", "tabs"],
+	"host_permissions": ["https://chat.openai.com/*"],
+	"background": {
+	  "service_worker": "background.js"
+	},
+	"content_scripts": [
+	  {
+		"matches": ["https://chat.openai.com/*"],
+		"js": ["content.js","js/turndown.js"]
+	  }
+	],
+	"action": {
+		"default_title": "Chatgpt save",
+		"default_popup": "popup.html"
+	},
+	"manifest_version": 3
+  }
